@@ -1,0 +1,22 @@
+{
+  "node": true,
+  "newcap": true,
+  "curly": true,
+  "eqeqeq": true,
+  "unused": true,
+  "undef": true,
+  "noarg": true,
+  "noempty": true,
+  "nonew": true,
+  "white": true,
+  "expr": true,
+  "indent": 2,
+  "predef": [
+    "describe",
+    "it",
+    "beforeEach",
+    "afterEach",
+    "before",
+    "after"
+  ]
+}

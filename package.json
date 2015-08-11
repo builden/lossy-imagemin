@@ -1,6 +1,6 @@
 {
   "name": "lossy-imagemin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "lossy compress image for web",
   "main": "lib/lossy-imagemin.js",
   "scripts": {

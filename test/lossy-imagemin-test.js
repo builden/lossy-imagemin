@@ -1,20 +1,21 @@
 var fs = require('fs');
 var del = require('del');
 var expect = require('chai').expect;
+var cache = require('gulp-cache');
 
 var imagemin = require('../lib/lossy-imagemin.js');
 
 var tmpPath = 'test/tmp-result-res';
 describe('lossy-imagemin', function () {
-  before(function () {
+  before(function (done) {
     del.sync(tmpPath);
     fs.mkdirSync(tmpPath);
+    cache.clearAll(done);
   });
 
   it('retain dir info', function (done) {
     imagemin('test/res/**/*', 'test/tmp-result-res', {
       base: 'test/res',
-      pngQuality: '50-70',
       jpgQuality: '50'
     }, function (err) {
       expect(err).not.exist;

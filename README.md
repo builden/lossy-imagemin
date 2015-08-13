@@ -6,7 +6,8 @@ lossy compress image by imagemin-pngquant & imagemin-mozjpeg
 var imagemin = require('lossy-imagemin');
 var opt = {
   base: 'res',          // destPath retain src dir info
-  jpgQuality: '70'      // max 100, default: 70
+  jpgQuality: '70',     // max 100, default: 70
+  cache: fasle          // use gulp cache [true]
 };
 imagemin(srcGlob, destPath, opt, function(err) {
   if (err) {
